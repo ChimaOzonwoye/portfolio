@@ -65,6 +65,29 @@ SECT (Security Empowerment through Cutting-edge Technology) is a browser-based S
 
 Simply open `index.html` in a modern web browser. No server required!
 
+## 📜 License & Terms
+
+SECT is **FREE FOREVER** and protected by the following terms:
+
+### ✅ You CAN:
+- Use SECT for personal or organizational security
+- Share SECT with anyone who needs protection
+- Modify SECT for your own use
+- Learn from the code
+
+### ❌ You CANNOT:
+- Sell SECT or charge for access
+- Bundle SECT with paid services
+- Create commercial derivatives
+- Remove attribution to original creators
+
+### ⚖️ Legal Notice:
+- **NO WARRANTY**: SECT is provided "as is" without any guarantees
+- **NO LIABILITY**: Creators are not liable for any damages from use
+- **USER RESPONSIBILITY**: You remain responsible for your cybersecurity decisions
+
+SECT was created to democratize cybersecurity. It must remain free and accessible to everyone, especially those who need it most.
+
 ---
 
 **Note**: This project demonstrates how enterprise-level security capabilities can be made accessible to everyone, addressing a critical gap in the cybersecurity ecosystem.
