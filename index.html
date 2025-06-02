@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chima Ozonwoye - Portfolio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        
+        h1 {
+            margin-bottom: 0.2em;
+            color: #111;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .projects {
+            display: grid;
+            gap: 2em;
+            margin-bottom: 3em;
+        }
+        
+        .project-card {
+            background: white;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .project-title {
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+            color: #1e3a8a;
+        }
+        
+        .project-description {
+            color: #555;
+            margin-bottom: 1em;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1em;
+        }
+        
+        .project-link {
+            color: #1e3a8a;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border: 1px solid #1e3a8a;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        
+        .project-link:hover {
+            background: #1e3a8a;
+            color: white;
+        }
+        
+        .blog-section {
+            text-align: center;
+            padding: 2em;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .blog-link {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        
+        .blog-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Chima Ozonwoye</h1>
+        <p class="tagline">Security Analyst | Systems Thinker | Problem Solver</p>
+    </div>
+    
+    <div class="projects">
+        <div class="project-card">
+            <h2 class="project-title">SECT - Security Intelligence Platform</h2>
+            <p class="project-description">
+                Enterprise-grade SIEM capabilities made accessible for everyone. Real-time threat detection, 
+                email security analysis, and AI-powered behavioral analysis - all running privately in your browser.
+            </p>
+            <div class="project-links">
+                <a href="SIEM/" class="project-link">Live Demo</a>
+                <a href="https://github.com/Chimazuruihenine/portfolio/tree/main/SIEM" class="project-link">View Code</a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <h2 class="project-title">Advanced Cryptocurrency Trading Bot</h2>
+            <p class="project-description">
+                Sophisticated automated trading system featuring AI validation, machine learning pattern recognition, 
+                sentiment analysis, and institutional-grade risk management for 24/7 cryptocurrency trading.
+            </p>
+            <div class="project-links">
+                <a href="https://github.com/Chimazuruihenine/portfolio/tree/main/crypto_bot" class="project-link">View Code</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blog-section">
+        <h2>Thoughts & Writings</h2>
+        <p>Occasional reflections on technology, security, and systems thinking</p>
+        <a href="blog/" class="blog-link">Visit Blog →</a>
+    </div>
+</body>
+</html>
