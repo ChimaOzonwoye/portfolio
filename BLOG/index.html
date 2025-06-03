@@ -5,14 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoughts & Writings - Chima Ozonwoye</title>
     <style>
+        :root {
+            --bg-primary: #fafafa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f5f5f5;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-tertiary: #888;
+            --accent: #0a1628;
+            --accent-hover: #1e3a8a;
+            --border: #e0e0e0;
+            --shadow: rgba(0,0,0,0.1);
+            --comment-bg: rgba(245,245,245,0.5);
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #0a1628;
+            --bg-secondary: #1a2638;
+            --bg-tertiary: #243448;
+            --text-primary: #e8e8e8;
+            --text-secondary: #b8b8b8;
+            --text-tertiary: #888;
+            --accent: #5a7aa8;
+            --accent-hover: #7a9ac8;
+            --border: #2a3848;
+            --shadow: rgba(0,0,0,0.3);
+            --comment-bg: rgba(36,52,72,0.3);
+        }
+        
         body {
             font-family: 'Times New Roman', Times, serif;
             line-height: 1.8;
-            max-width: 650px;
+            max-width: 750px;
             margin: 0 auto;
             padding: 20px;
-            color: #333;
-            background: #fafafa;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            transition: all 0.3s ease;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+            color: var(--text-primary);
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px var(--shadow);
+        }
+        
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
         }
         
         .header {
@@ -23,12 +73,12 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 0.2em;
-            color: #0a1628;
+            color: var(--text-primary);
             font-family: 'Times New Roman', Times, serif;
         }
         
         .subtitle {
-            color: #666;
+            color: var(--text-secondary);
             font-style: italic;
             margin-bottom: 2em;
             font-size: 1.1em;
@@ -43,77 +93,141 @@
             width: 70%;
             padding: 10px 15px;
             font-size: 1em;
-            border: 1px solid #ddd;
+            border: 1px solid var(--border);
             border-radius: 25px;
             font-family: 'Times New Roman', Times, serif;
             outline: none;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
         }
         
         .search-box:focus {
-            border-color: #0a1628;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(90, 122, 168, 0.1);
         }
         
         .posts {
             margin-bottom: 4em;
         }
         
-        .post {
+        .intro {
             margin-bottom: 4em;
-            padding-bottom: 3em;
-            border-bottom: 1px solid #e0e0e0;
+            padding: 2em;
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            box-shadow: 0 2px 8px var(--shadow);
         }
         
-        .post:last-child {
-            border-bottom: none;
+        .intro .post-content {
+            font-style: italic;
+            text-align: justify;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        .post {
+            margin-bottom: 3em;
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            padding: 2em;
+            box-shadow: 0 2px 8px var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .post:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px var(--shadow);
         }
         
         .post-title {
             font-size: 1.8em;
             margin-bottom: 0.3em;
-            color: #0a1628;
+            color: var(--accent);
             font-family: 'Times New Roman', Times, serif;
         }
         
         .post-date {
-            color: #888;
+            color: var(--text-tertiary);
             font-size: 0.9em;
-            margin-bottom: 1.5em;
+            margin-bottom: 1em;
             font-style: italic;
         }
         
-        .post-content {
-            color: #444;
+        .post-preview {
+            color: var(--text-primary);
             text-align: justify;
-            margin-bottom: 2em;
+            margin-bottom: 1em;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        
+        .post-full {
+            color: var(--text-primary);
+            text-align: justify;
+            margin-bottom: 1em;
+            display: none;
         }
         
         .post-content p {
             margin-bottom: 1.2em;
         }
         
-        /* Comment Section */
+        .read-more-btn {
+            color: var(--accent);
+            cursor: pointer;
+            font-style: italic;
+            display: inline-block;
+            margin-bottom: 1.5em;
+            transition: color 0.3s;
+        }
+        
+        .read-more-btn:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+        
+        /* Comment Section - More Subtle */
+        .comment-toggle {
+            color: var(--text-tertiary);
+            font-size: 0.9em;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: color 0.3s;
+            margin-top: 1em;
+        }
+        
+        .comment-toggle:hover {
+            color: var(--accent);
+        }
+        
         .comment-section {
-            background: #f5f5f5;
-            padding: 2em;
+            background: var(--comment-bg);
+            padding: 1.5em;
             border-radius: 10px;
-            margin-top: 2em;
+            margin-top: 1em;
+            display: none;
+            border: 1px solid var(--border);
         }
         
         .comment-section h3 {
-            color: #0a1628;
+            color: var(--text-secondary);
             margin-bottom: 1em;
-            font-size: 1.3em;
+            font-size: 1.1em;
         }
         
         .comment-form {
-            margin-bottom: 2em;
+            margin-bottom: 1.5em;
         }
         
         .form-row {
             display: flex;
             gap: 1em;
-            margin-bottom: 1em;
+            margin-bottom: 0.8em;
         }
         
         .form-group {
@@ -122,37 +236,39 @@
         
         .form-group label {
             display: block;
-            margin-bottom: 0.3em;
-            color: #555;
-            font-size: 0.9em;
+            margin-bottom: 0.2em;
+            color: var(--text-secondary);
+            font-size: 0.85em;
         }
         
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 8px 12px;
-            border: 1px solid #ddd;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
             border-radius: 5px;
             font-family: 'Times New Roman', Times, serif;
-            font-size: 1em;
+            font-size: 0.95em;
             outline: none;
             transition: border-color 0.3s;
+            background: var(--bg-primary);
+            color: var(--text-primary);
         }
         
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: #0a1628;
+            border-color: var(--accent);
         }
         
         .form-group textarea {
-            min-height: 100px;
+            min-height: 80px;
             resize: vertical;
         }
         
         .anonymous-option {
-            margin-bottom: 1em;
-            font-size: 0.9em;
-            color: #666;
+            margin-bottom: 0.8em;
+            font-size: 0.85em;
+            color: var(--text-secondary);
         }
         
         .anonymous-option input[type="checkbox"] {
@@ -160,68 +276,91 @@
         }
         
         .submit-btn {
-            background: #0a1628;
+            background: var(--accent);
             color: white;
-            padding: 10px 25px;
+            padding: 8px 20px;
             border: none;
             border-radius: 5px;
             font-family: 'Times New Roman', Times, serif;
-            font-size: 1em;
+            font-size: 0.95em;
             cursor: pointer;
             transition: background 0.3s;
         }
         
         .submit-btn:hover {
-            background: #1e3a8a;
+            background: var(--accent-hover);
         }
         
         .comments-list {
-            margin-top: 2em;
+            margin-top: 1.5em;
         }
         
         .comment {
-            background: white;
-            padding: 1.5em;
+            background: var(--bg-primary);
+            padding: 1em;
             border-radius: 8px;
-            margin-bottom: 1em;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 0.8em;
+            border: 1px solid var(--border);
         }
         
         .comment-author {
             font-weight: bold;
-            color: #0a1628;
-            margin-bottom: 0.3em;
+            color: var(--accent);
+            margin-bottom: 0.2em;
+            font-size: 0.95em;
         }
         
         .comment-date {
-            font-size: 0.85em;
-            color: #888;
-            margin-bottom: 0.8em;
+            font-size: 0.8em;
+            color: var(--text-tertiary);
+            margin-bottom: 0.5em;
         }
         
         .comment-text {
-            color: #444;
+            color: var(--text-primary);
             line-height: 1.6;
+            font-size: 0.95em;
         }
         
         .no-results {
             text-align: center;
-            color: #888;
+            color: var(--text-tertiary);
             font-style: italic;
             margin: 3em 0;
         }
         
         a {
-            color: #0a1628;
+            color: var(--accent);
             text-decoration: none;
         }
         
         a:hover {
             text-decoration: underline;
         }
+        
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0.8em;
+            }
+            
+            .search-box {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+    
     <div class="header">
         <h1>Thoughts & Writings</h1>
         <p class="subtitle">Random observations and reflections on life, and technology</p>
@@ -233,8 +372,8 @@
     
     <div class="posts" id="postsContainer">
         <!-- Introduction -->
-        <div class="intro" style="margin-bottom: 4em; padding-bottom: 3em; border-bottom: 1px solid #e0e0e0;">
-            <div class="post-content" style="font-style: italic; text-align: justify;">
+        <div class="intro">
+            <div class="post-content">
                 <p>To the esteemed reader, these reflections represent my ongoing attempt to understand life, work, and technology - I welcome conversations with those who see things differently. There should be doubts about all this making sense, and not making sense. These are posts that you'll find meaningful. and sometimes not making sense, and like life, a contradiction worth going through...</p>
             </div>
         </div>
@@ -243,11 +382,20 @@
         <div class="post" data-post-id="1">
             <h2 class="post-title">On Consequences</h2>
             <div class="post-date">2025</div>
-            <div class="post-content">
+            
+            <div class="post-preview">
                 <p>Consequences are not a matter of if; they're of when. It's best to avoid situations that would make the when likely to occur.</p>
             </div>
             
-            <div class="comment-section">
+            <div class="post-full">
+                <p>Consequences are not a matter of if; they're of when. It's best to avoid situations that would make the when likely to occur.</p>
+            </div>
+            
+            <div class="comment-toggle" onclick="toggleComments(1)">
+                💬 Comments
+            </div>
+            
+            <div class="comment-section" id="comment-section-1">
                 <h3>Leave a Comment</h3>
                 <form class="comment-form" onsubmit="submitComment(event, 1)">
                     <div class="form-row">
@@ -283,13 +431,24 @@
         <div class="post" data-post-id="2">
             <h2 class="post-title">Stages of Life</h2>
             <div class="post-date">2025</div>
-            <div class="post-content">
+            
+            <div class="post-preview">
+                <p>There are stages in life. Live right, but live life. Don't listen to people telling you they would do/ engage in a particular activity if they were 18 again, or things they wish they knew.</p>
+            </div>
+            
+            <div class="post-full">
                 <p>There are stages in life. Live right, but live life. Don't listen to people telling you they would do/ engage in a particular activity if they were 18 again, or things they wish they knew.</p>
                 
                 <p>You have to do the little nothings, the meaningless, make mistakes, and have regrets. Then you learn and grow from it. If you don't, you see yourself doing them later on in life when the stakes are higher. All in all, live, learn, and grow.</p>
             </div>
             
-            <div class="comment-section">
+            <div class="read-more-btn" onclick="toggleReadMore(2)">Read more...</div>
+            
+            <div class="comment-toggle" onclick="toggleComments(2)">
+                💬 Comments
+            </div>
+            
+            <div class="comment-section" id="comment-section-2">
                 <h3>Leave a Comment</h3>
                 <form class="comment-form" onsubmit="submitComment(event, 2)">
                     <div class="form-row">
@@ -1233,15 +1392,79 @@
     </div>
     
     <script>
-        // Initialize comments storage
+        // Initialize theme and comments storage
         if (!localStorage.getItem('blogComments')) {
             localStorage.setItem('blogComments', JSON.stringify({}));
         }
         
-        // Load comments on page load
+        // Load theme and comments on page load
         window.addEventListener('DOMContentLoaded', function() {
+            loadTheme();
             loadAllComments();
         });
+        
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.getElementById('themeToggle');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeToggle.innerHTML = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.getElementById('themeToggle');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light';
+            } else {
+                themeToggle.innerHTML = '🌙 Dark';
+            }
+        }
+        
+        // Add event listener to theme toggle
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+        
+        // Read More Toggle
+        function toggleReadMore(postId) {
+            const preview = document.querySelector(`[data-post-id=\"${postId}\"] .post-preview`);
+            const full = document.querySelector(`[data-post-id=\"${postId}\"] .post-full`);
+            const button = document.querySelector(`[data-post-id=\"${postId}\"] .read-more-btn`);
+            
+            if (full.style.display === 'none' || !full.style.display) {
+                full.style.display = 'block';
+                preview.style.display = 'none';
+                button.textContent = 'Read less';
+            } else {
+                full.style.display = 'none';
+                preview.style.display = 'block';
+                button.textContent = 'Read more...';
+            }
+        }
+        
+        // Comment Toggle
+        function toggleComments(postId) {
+            const commentSection = document.getElementById(`comment-section-${postId}`);
+            const toggle = document.querySelector(`[data-post-id=\"${postId}\"] .comment-toggle`);
+            
+            if (commentSection.style.display === 'none' || !commentSection.style.display) {
+                commentSection.style.display = 'block';
+                toggle.innerHTML = '💬 Hide Comments';
+            } else {
+                commentSection.style.display = 'none';
+                toggle.innerHTML = '💬 Comments';
+            }
+        }
         
         function searchPosts() {
             const searchTerm = document.getElementById('searchBox').value.toLowerCase();
@@ -1251,7 +1474,12 @@
             
             posts.forEach(post => {
                 const title = post.querySelector('.post-title').textContent.toLowerCase();
-                const content = post.querySelector('.post-content').textContent.toLowerCase();
+                const preview = post.querySelector('.post-preview');
+                const full = post.querySelector('.post-full');
+                
+                let content = '';
+                if (preview) content += preview.textContent.toLowerCase();
+                if (full) content += full.textContent.toLowerCase();
                 
                 if (title.includes(searchTerm) || content.includes(searchTerm)) {
                     post.style.display = 'block';
