@@ -1,5 +1,7 @@
 # SECT - Security Intelligence Platform
 
+**[🚀 View Live Demo](https://chimazuruihenine.github.io/portfolio/SIEM/)**
+
 Enterprise-grade security intelligence made accessible for everyone. SECT democratizes advanced threat detection and analysis capabilities traditionally reserved for large organizations.
 
 ## 🛡️ Overview
@@ -64,6 +66,18 @@ SECT (Security Empowerment through Cutting-edge Technology) is a browser-based S
 ## 🏃‍♂️ Running Locally
 
 Simply open `index.html` in a modern web browser. No server required!
+
+## 🚧 Development Status
+
+**SECT is currently in active development.** While functional, it has not yet achieved its full vision of being truly accessible to the everyday person. Currently, accessing SECT through GitHub requires technical knowledge that many of our target users don't possess.
+
+### How You Can Help:
+- **Share SECT** with those who need it
+- **Contribute** ideas and code improvements
+- **Send suggestions** to: ozonwoyechima@gmail.com
+- **Help make SECT more accessible** to non-technical users
+
+Our goal is to eventually provide SECT through simple, one-click installations and browser extensions that anyone can use without technical expertise.
 
 ## 📜 License & Terms
 

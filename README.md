@@ -7,10 +7,10 @@ This repository contains my technical projects and writings, demonstrating pract
 ### [SECT - Security Intelligence Platform](./SIEM/)
 A browser-based SIEM platform that democratizes enterprise security capabilities for individuals and small businesses. Features real-time threat detection, email security analysis, and privacy-first design.
 
-### [Advanced Cryptocurrency Trading Bot](./crypto_bot/)
+### [Advanced Cryptocurrency Trading Bot](./CRYPTO_BOT/)
 An autonomous trading system combining technical analysis, AI validation, and machine learning for cryptocurrency markets. Demonstrates advanced software architecture and risk management principles.
 
-### [Blog - Thoughts & Writings](./blog/)
+### [Blog - Thoughts & Writings](./BLOG/)
 Occasional reflections on technology, security, systems thinking, and observations on various subjects.
 
 ## 🔗 Live Portfolio
