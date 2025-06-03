@@ -1,47 +1,19 @@
-# Site settings
 title: "Thoughts & Writings"
 subtitle: "Random observations and reflections on life, and technology"
 author: "Chima Ozonwoye"
-email: "your-email@domain.com"
-description: >-
-  To the esteemed reader, these reflections represent my ongoing attempt to understand life, work, and technology - 
-  I welcome conversations with those who see things differently.
+description: "To the esteemed reader, these reflections represent my ongoing attempt to understand life, work, and technology - I welcome conversations with those who see things differently."
 
 baseurl: "/portfolio"
 url: "https://chimazuruihenine.github.io"
 
-# Blog settings
-paginate: 10
-paginate_path: "/blog/page:num/"
-excerpt_separator: "<!-- more -->"
-
-# Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
-timezone: America/New_York
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
-
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
 
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - vendor/
-
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -49,12 +21,3 @@ defaults:
     values:
       layout: "post"
       comments: true
-      share: true
-
-# Theme settings
-theme_config:
-  show_excerpts: true
-  show_author: true
-  show_date: true
-  show_tags: true
-  comments_enabled: true
