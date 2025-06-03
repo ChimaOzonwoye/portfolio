@@ -6,8 +6,8 @@
     <title>Thoughts & Writings - Chima Ozonwoye</title>
     <style>
         body {
-            font-family: Georgia, serif;
-            line-height: 1.6;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.8;
             max-width: 650px;
             margin: 0 auto;
             padding: 20px;
@@ -15,21 +15,52 @@
             background: #fafafa;
         }
         
+        .header {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        
         h1 {
-            font-size: 2em;
-            margin-bottom: 0.5em;
-            color: #111;
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            color: #0a1628;
+            font-family: 'Times New Roman', Times, serif;
         }
         
         .subtitle {
             color: #666;
             font-style: italic;
+            margin-bottom: 2em;
+            font-size: 1.1em;
+        }
+        
+        .search-container {
             margin-bottom: 3em;
+            text-align: center;
+        }
+        
+        .search-box {
+            width: 70%;
+            padding: 10px 15px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            border-color: #0a1628;
+        }
+        
+        .posts {
+            margin-bottom: 4em;
         }
         
         .post {
-            margin-bottom: 3em;
-            padding-bottom: 2em;
+            margin-bottom: 4em;
+            padding-bottom: 3em;
             border-bottom: 1px solid #e0e0e0;
         }
         
@@ -38,54 +69,336 @@
         }
         
         .post-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 0.3em;
-            color: #111;
+            color: #0a1628;
+            font-family: 'Times New Roman', Times, serif;
         }
         
         .post-date {
             color: #888;
             font-size: 0.9em;
-            margin-bottom: 1em;
+            margin-bottom: 1.5em;
+            font-style: italic;
         }
         
         .post-content {
             color: #444;
             text-align: justify;
+            margin-bottom: 2em;
+        }
+        
+        .post-content p {
+            margin-bottom: 1.2em;
+        }
+        
+        /* Comment Section */
+        .comment-section {
+            background: #f5f5f5;
+            padding: 2em;
+            border-radius: 10px;
+            margin-top: 2em;
+        }
+        
+        .comment-section h3 {
+            color: #0a1628;
+            margin-bottom: 1em;
+            font-size: 1.3em;
+        }
+        
+        .comment-form {
+            margin-bottom: 2em;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+        
+        .form-group {
+            flex: 1;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.3em;
+            color: #555;
+            font-size: 0.9em;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #0a1628;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .anonymous-option {
+            margin-bottom: 1em;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .anonymous-option input[type="checkbox"] {
+            margin-right: 0.5em;
+        }
+        
+        .submit-btn {
+            background: #0a1628;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #1e3a8a;
+        }
+        
+        .comments-list {
+            margin-top: 2em;
+        }
+        
+        .comment {
+            background: white;
+            padding: 1.5em;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .comment-author {
+            font-weight: bold;
+            color: #0a1628;
+            margin-bottom: 0.3em;
+        }
+        
+        .comment-date {
+            font-size: 0.85em;
+            color: #888;
+            margin-bottom: 0.8em;
+        }
+        
+        .comment-text {
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            margin: 3em 0;
         }
         
         a {
-            color: #1e3a8a;
+            color: #0a1628;
             text-decoration: none;
         }
         
         a:hover {
             text-decoration: underline;
         }
-        
-        .back-link {
-            margin-bottom: 2em;
-            font-size: 0.9em;
-        }
     </style>
 </head>
 <body>
-    <div class="back-link">
-        <a href="../">← Back to Portfolio</a>
+    <div class="header">
+        <h1>Thoughts & Writings</h1>
+        <p class="subtitle">Random observations and reflections on life, and technology</p>
     </div>
     
-    <h1>Thoughts & Writings</h1>
-    <p class="subtitle">Random observations and reflections on technology, security, and life</p>
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search thoughts..." id="searchBox" onkeyup="searchPosts()">
+    </div>
     
-    <div class="posts">
-        <div class="post">
+    <div class="posts" id="postsContainer">
+        <div class="post" data-post-id="1">
             <h2 class="post-title">Welcome</h2>
             <div class="post-date">January 2025</div>
             <div class="post-content">
-                <p>This space will house various thoughts and observations on subjects ranging from cybersecurity patterns to system thinking, and occasionally, reflections on the intersection of technology and human behavior.</p>
+                <p>This space will house various thoughts and observations on subjects ranging from life experiences to technology patterns, and occasionally, reflections on the intersection of human behavior and digital systems.</p>
                 <p>More writings coming soon...</p>
+            </div>
+            
+            <div class="comment-section">
+                <h3>Leave a Comment</h3>
+                <form class="comment-form" onsubmit="submitComment(event, 1)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name-1">Name</label>
+                            <input type="text" id="name-1" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-1">Email</label>
+                            <input type="email" id="email-1" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="anonymous-option">
+                        <label>
+                            <input type="checkbox" id="anonymous-1" onchange="toggleAnonymous(1)">
+                            Comment anonymously
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-1">Comment</label>
+                        <textarea id="comment-1" placeholder="Share your thoughts..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Post Comment</button>
+                </form>
+                
+                <div class="comments-list" id="comments-1">
+                    <!-- Comments will be displayed here -->
+                </div>
             </div>
         </div>
     </div>
+    
+    <div class="no-results" id="noResults" style="display: none;">
+        No posts found matching your search.
+    </div>
+    
+    <script>
+        // Initialize comments storage
+        if (!localStorage.getItem('blogComments')) {
+            localStorage.setItem('blogComments', JSON.stringify({}));
+        }
+        
+        // Load comments on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadAllComments();
+        });
+        
+        function searchPosts() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const posts = document.querySelectorAll('.post');
+            const noResults = document.getElementById('noResults');
+            let hasResults = false;
+            
+            posts.forEach(post => {
+                const title = post.querySelector('.post-title').textContent.toLowerCase();
+                const content = post.querySelector('.post-content').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    post.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+            
+            noResults.style.display = hasResults ? 'none' : 'block';
+        }
+        
+        function toggleAnonymous(postId) {
+            const checkbox = document.getElementById(`anonymous-${postId}`);
+            const nameField = document.getElementById(`name-${postId}`);
+            const emailField = document.getElementById(`email-${postId}`);
+            
+            if (checkbox.checked) {
+                nameField.disabled = true;
+                nameField.value = '';
+                nameField.removeAttribute('required');
+                emailField.disabled = true;
+                emailField.value = '';
+                emailField.removeAttribute('required');
+            } else {
+                nameField.disabled = false;
+                nameField.setAttribute('required', '');
+                emailField.disabled = false;
+                emailField.setAttribute('required', '');
+            }
+        }
+        
+        function submitComment(event, postId) {
+            event.preventDefault();
+            
+            const isAnonymous = document.getElementById(`anonymous-${postId}`).checked;
+            const name = isAnonymous ? 'Anonymous' : document.getElementById(`name-${postId}`).value;
+            const email = isAnonymous ? '' : document.getElementById(`email-${postId}`).value;
+            const comment = document.getElementById(`comment-${postId}`).value;
+            
+            if (!isAnonymous && (!name || !email)) {
+                alert('Please fill in your name and email, or choose to comment anonymously.');
+                return;
+            }
+            
+            if (!comment) {
+                alert('Please enter a comment.');
+                return;
+            }
+            
+            // Save comment to localStorage
+            const comments = JSON.parse(localStorage.getItem('blogComments'));
+            if (!comments[postId]) {
+                comments[postId] = [];
+            }
+            
+            const newComment = {
+                name: name,
+                email: email,
+                comment: comment,
+                date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            };
+            
+            comments[postId].push(newComment);
+            localStorage.setItem('blogComments', JSON.stringify(comments));
+            
+            // Clear form
+            document.getElementById(`name-${postId}`).value = '';
+            document.getElementById(`email-${postId}`).value = '';
+            document.getElementById(`comment-${postId}`).value = '';
+            document.getElementById(`anonymous-${postId}`).checked = false;
+            toggleAnonymous(postId);
+            
+            // Display comment
+            displayComment(postId, newComment);
+            
+            alert('Your comment has been posted!');
+        }
+        
+        function displayComment(postId, comment) {
+            const commentsContainer = document.getElementById(`comments-${postId}`);
+            
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment';
+            commentDiv.innerHTML = `
+                <div class="comment-author">${comment.name}</div>
+                <div class="comment-date">${comment.date}</div>
+                <div class="comment-text">${comment.comment}</div>
+            `;
+            
+            commentsContainer.appendChild(commentDiv);
+        }
+        
+        function loadAllComments() {
+            const comments = JSON.parse(localStorage.getItem('blogComments'));
+            
+            for (const postId in comments) {
+                comments[postId].forEach(comment => {
+                    displayComment(postId, comment);
+                });
+            }
+        }
+    </script>
 </body>
 </html>
