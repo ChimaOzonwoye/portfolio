@@ -10,8 +10,8 @@ A browser-based SIEM platform that democratizes enterprise security capabilities
 ### [Advanced Cryptocurrency Trading Bot](./CRYPTO_BOT/)
 An autonomous trading system combining technical analysis, AI validation, and machine learning for cryptocurrency markets. Demonstrates advanced software architecture and risk management principles.
 
-### [Blog - Thoughts & Writings](./BLOG/)
-Occasional reflections on technology, security, systems thinking, and observations on various subjects.
+### [Blog - Thoughts & Writings](./blog/)
+Occasional reflections on life, technology, and observations on various subjects.
 
 ## 🔗 Live Portfolio
 
