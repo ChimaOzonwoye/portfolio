@@ -1,0 +1,395 @@
+---
+layout: default
+---
+
+<style>
+    .post-header {
+        text-align: center;
+        margin-bottom: 2em;
+        padding: 2em;
+        background: var(--bg-secondary);
+        border-radius: 15px;
+        box-shadow: 0 2px 8px var(--shadow);
+    }
+    
+    .post-title {
+        font-size: 2.5em;
+        margin-bottom: 0.3em;
+        color: var(--accent);
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.3;
+    }
+    
+    .post-date {
+        color: var(--text-tertiary);
+        font-size: 1em;
+        font-style: italic;
+        margin-bottom: 1em;
+    }
+    
+    .post-content {
+        background: var(--bg-secondary);
+        padding: 2.5em;
+        border-radius: 15px;
+        box-shadow: 0 2px 8px var(--shadow);
+        margin-bottom: 2em;
+        color: var(--text-primary);
+        text-align: justify;
+        line-height: 1.8;
+    }
+    
+    .post-content p {
+        margin-bottom: 1.5em;
+    }
+    
+    .post-content p:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Comment Section */
+    .comment-section {
+        background: var(--comment-bg);
+        padding: 2em;
+        border-radius: 15px;
+        margin-top: 2em;
+        border: 1px solid var(--border);
+    }
+    
+    .comment-section h3 {
+        color: var(--text-primary);
+        margin-bottom: 1.5em;
+        font-size: 1.4em;
+        text-align: center;
+    }
+    
+    .comment-form {
+        margin-bottom: 2em;
+    }
+    
+    .form-row {
+        display: flex;
+        gap: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .form-group {
+        flex: 1;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 0.3em;
+        color: var(--text-secondary);
+        font-size: 0.9em;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1em;
+        outline: none;
+        transition: border-color 0.3s;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: var(--accent);
+    }
+    
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+    
+    .anonymous-option {
+        margin-bottom: 1.2em;
+        font-size: 0.95em;
+        color: var(--text-secondary);
+    }
+    
+    .anonymous-option input[type="checkbox"] {
+        margin-right: 0.5em;
+    }
+    
+    .submit-btn {
+        background: var(--accent);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    .submit-btn:hover {
+        background: var(--accent-hover);
+    }
+    
+    .comments-list {
+        margin-top: 2em;
+    }
+    
+    .comment {
+        background: var(--bg-primary);
+        padding: 1.5em;
+        border-radius: 10px;
+        margin-bottom: 1.5em;
+        border: 1px solid var(--border);
+    }
+    
+    .comment-author {
+        font-weight: bold;
+        color: var(--accent);
+        margin-bottom: 0.3em;
+        font-size: 1em;
+    }
+    
+    .comment-date {
+        font-size: 0.9em;
+        color: var(--text-tertiary);
+        margin-bottom: 0.8em;
+    }
+    
+    .comment-text {
+        color: var(--text-primary);
+        line-height: 1.6;
+    }
+    
+    .post-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3em;
+        padding-top: 2em;
+        border-top: 1px solid var(--border);
+    }
+    
+    .post-nav-link {
+        color: var(--accent);
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        transition: all 0.3s;
+        background: var(--bg-secondary);
+    }
+    
+    .post-nav-link:hover {
+        background: var(--accent);
+        color: white;
+    }
+    
+    .back-to-blog {
+        text-align: center;
+        margin: 2em 0;
+    }
+    
+    .back-to-blog a {
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 10px 20px;
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        transition: all 0.3s;
+    }
+    
+    .back-to-blog a:hover {
+        background: var(--accent);
+        color: white;
+    }
+    
+    @media (max-width: 600px) {
+        .post-title {
+            font-size: 2em;
+        }
+        
+        .post-content {
+            padding: 1.5em;
+        }
+        
+        .form-row {
+            flex-direction: column;
+            gap: 1em;
+        }
+        
+        .post-navigation {
+            flex-direction: column;
+            gap: 1em;
+        }
+    }
+</style>
+
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%Y" }}
+        </time>
+    </header>
+    
+    <div class="post-content">
+        {{ content }}
+    </div>
+    
+    {% if page.comments %}
+    <div class="comment-section">
+        <h3>Leave a Comment</h3>
+        <form class="comment-form" onsubmit="submitComment(event, '{{ page.id }}')">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name-{{ page.id }}">Name</label>
+                    <input type="text" id="name-{{ page.id }}" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-{{ page.id }}">Email</label>
+                    <input type="email" id="email-{{ page.id }}" placeholder="your@email.com" required>
+                </div>
+            </div>
+            <div class="anonymous-option">
+                <label>
+                    <input type="checkbox" id="anonymous-{{ page.id }}" onchange="toggleAnonymous('{{ page.id }}')">
+                    Comment anonymously
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="comment-{{ page.id }}">Comment</label>
+                <textarea id="comment-{{ page.id }}" placeholder="Share your thoughts..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Post Comment</button>
+        </form>
+        
+        <div class="comments-list" id="comments-{{ page.id }}">
+            <!-- Comments will be displayed here -->
+        </div>
+    </div>
+    {% endif %}
+</article>
+
+<div class="back-to-blog">
+    <a href="{{ site.baseurl }}/blog/">← Back to All Posts</a>
+</div>
+
+<nav class="post-navigation">
+    {% if page.previous.url %}
+        <a href="{{ page.previous.url | relative_url }}" class="post-nav-link">
+            ← {{ page.previous.title }}
+        </a>
+    {% else %}
+        <span></span>
+    {% endif %}
+    
+    {% if page.next.url %}
+        <a href="{{ page.next.url | relative_url }}" class="post-nav-link">
+            {{ page.next.title }} →
+        </a>
+    {% else %}
+        <span></span>
+    {% endif %}
+</nav>
+
+<script>
+    // Comment functionality
+    function toggleAnonymous(postId) {
+        const checkbox = document.getElementById(`anonymous-${postId}`);
+        const nameField = document.getElementById(`name-${postId}`);
+        const emailField = document.getElementById(`email-${postId}`);
+        
+        if (checkbox.checked) {
+            nameField.disabled = true;
+            nameField.value = '';
+            nameField.removeAttribute('required');
+            emailField.disabled = true;
+            emailField.value = '';
+            emailField.removeAttribute('required');
+        } else {
+            nameField.disabled = false;
+            nameField.setAttribute('required', '');
+            emailField.disabled = false;
+            emailField.setAttribute('required', '');
+        }
+    }
+    
+    function submitComment(event, postId) {
+        event.preventDefault();
+        
+        const isAnonymous = document.getElementById(`anonymous-${postId}`).checked;
+        const name = isAnonymous ? 'Anonymous' : document.getElementById(`name-${postId}`).value;
+        const email = isAnonymous ? '' : document.getElementById(`email-${postId}`).value;
+        const comment = document.getElementById(`comment-${postId}`).value;
+        
+        if (!isAnonymous && (!name || !email)) {
+            alert('Please fill in your name and email, or choose to comment anonymously.');
+            return;
+        }
+        
+        if (!comment) {
+            alert('Please enter a comment.');
+            return;
+        }
+        
+        // Save comment to localStorage
+        const comments = JSON.parse(localStorage.getItem('blogComments') || '{}');
+        if (!comments[postId]) {
+            comments[postId] = [];
+        }
+        
+        const newComment = {
+            name: name,
+            email: email,
+            comment: comment,
+            date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+        };
+        
+        comments[postId].push(newComment);
+        localStorage.setItem('blogComments', JSON.stringify(comments));
+        
+        // Clear form
+        document.getElementById(`name-${postId}`).value = '';
+        document.getElementById(`email-${postId}`).value = '';
+        document.getElementById(`comment-${postId}`).value = '';
+        document.getElementById(`anonymous-${postId}`).checked = false;
+        toggleAnonymous(postId);
+        
+        // Display comment
+        displayComment(postId, newComment);
+        
+        alert('Your comment has been posted!');
+    }
+    
+    function displayComment(postId, comment) {
+        const commentsContainer = document.getElementById(`comments-${postId}`);
+        
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.innerHTML = `
+            <div class="comment-author">${comment.name}</div>
+            <div class="comment-date">${comment.date}</div>
+            <div class="comment-text">${comment.comment}</div>
+        `;
+        
+        commentsContainer.appendChild(commentDiv);
+    }
+    
+    function loadComments(postId) {
+        const comments = JSON.parse(localStorage.getItem('blogComments') || '{}');
+        
+        if (comments[postId]) {
+            comments[postId].forEach(comment => {
+                displayComment(postId, comment);
+            });
+        }
+    }
+    
+    // Load comments on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        loadComments('{{ page.id }}');
+    });
+</script>
