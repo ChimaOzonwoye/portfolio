@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Strategy: The Systems Thinker's Approach"
+title: "Building a CTF: The Optimal A Systems Thinker's Approach"
 date: 2025-06-13
 tags: [cybersecurity, systems-thinking, ctf, ai-integration, strategy]
-excerpt: "How I architected a complete CTF competition-ready system in a day – transforming limitations into strategic advantages through systematic thinking and AI integration."
+excerpt: "On June 7, 2025, one week before the DoD Cyber Sentinel Challenge, I opened a PDF that had been sitting in my inbox. As someone who had never participated in a CTF competition before, I wasn't initially interested – until I saw one game-changing detail: participants were allowed to use AI assistance."
 ---
 
 ## Initial Discovery and Strategic Assessment

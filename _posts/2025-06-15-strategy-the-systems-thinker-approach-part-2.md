@@ -3,7 +3,7 @@ layout: post
 title: "Strategy: The Systems Thinker's Approach - Part 2"
 date: 2025-06-15
 tags: [cybersecurity, systems-thinking, ctf, ai-integration, strategy]
-excerpt: "Competition day reality check: How theoretical systems meet practical constraints, and why failure becomes the most valuable data point."
+excerpt: "At 11:00 AM on June 14th, while participants rushed to begin the competition, personal chores were still being concluded. This was indeed poor planning and contradicts a systems thinker's approach to strategy."
 ---
 
 ## Competition Day: Theory Meets Reality
