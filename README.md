@@ -28,7 +28,7 @@ A functional proof-of-concept designed to democratize security for small organiz
 
 A critical case study of the 2023 MGM Resorts breach. This report examines the failure of technical controls against social engineering and provides a strategic risk assessment focused on strengthening the organizational "human firewall".
 
-### Advanced Cryptocurrency Trading Bot
+### Cryptocurrency Trading Bot
 [View Code](./CRYPTO_BOT/)
 
 Automated trading system featuring AI validation, machine learning pattern recognition, sentiment analysis, and institutional-grade risk management for 24/7 cryptocurrency trading.
