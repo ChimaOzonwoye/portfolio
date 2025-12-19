@@ -1,6 +1,6 @@
 # Cryptocurrency Trading Bot with AI Validation
 
-A sophisticated automated trading system that combines technical analysis, sentiment analysis, and AI-powered decision validation for cryptocurrency trading.
+An automated trading system that combines technical analysis, sentiment analysis, and AI-powered decision validation for cryptocurrency trading.
 
 ##  Key Features
 
