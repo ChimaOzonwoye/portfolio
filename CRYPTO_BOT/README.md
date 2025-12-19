@@ -1,8 +1,8 @@
-# Advanced Cryptocurrency Trading Bot with AI Validation
+# Cryptocurrency Trading Bot with AI Validation
 
-An sophisticated automated trading system that combines technical analysis, sentiment analysis, and AI-powered decision validation for cryptocurrency trading.
+A sophisticated automated trading system that combines technical analysis, sentiment analysis, and AI-powered decision validation for cryptocurrency trading.
 
-## 🚀 Key Features
+##  Key Features
 
 - **Multi-Currency Support**: Trades 8 major cryptocurrency pairs (BTC, ETH, SOL, XRP, DOGE, ADA, AVAX, DOT)
 - **AI Decision Validation**: Dual AI integration with Claude and DeepSeek for trade validation
@@ -12,7 +12,7 @@ An sophisticated automated trading system that combines technical analysis, sent
 - **24/7 Operation**: Continuous market monitoring with configurable trading hours
 - **Production Safety**: Comprehensive error handling, rate limiting, and resource monitoring
 
-## 🏗️ Architecture
+##  Architecture
 
 The bot uses a modular object-oriented design with specialized components:
 
@@ -23,7 +23,7 @@ The bot uses a modular object-oriented design with specialized components:
 - `StopLossManager`: Volatility-based risk calculations
 - `ConnectionPreserver`: Network resilience and recovery
 
-## 📋 Requirements
+##  Requirements
 
 - Python 3.12+
 - Coinbase Pro account with API access
@@ -31,7 +31,7 @@ The bot uses a modular object-oriented design with specialized components:
 - Optional: Anthropic Claude API key for AI validation
 - Optional: DeepSeek API key for additional AI validation
 
-## 🔧 Setup
+##  Setup
 
 1. Clone this repository
 2. Install dependencies: `pip install -r requirements.txt`
@@ -40,21 +40,21 @@ The bot uses a modular object-oriented design with specialized components:
 5. Create a `trading_journal.txt` file for sentiment analysis
 6. Run: `python trading_bot.py`
 
-## ⚠️ Important Notes
+##  Important Notes
 
 - This bot involves real financial risk. Start with TEST_MODE = True
 - Past performance does not guarantee future results
 - Always monitor the bot's operation and set appropriate risk limits
 - The journal-based sentiment analysis is unique to this implementation
 
-## 🔐 Security
+##  Security
 
 - API keys are stored locally and never committed to version control
 - All exchange communications use encrypted HTTPS
 - Balance verification prevents overdrafts
 - Rate limiting ensures API compliance
 
-## 📊 Performance Tracking
+##  Performance Tracking
 
 The bot maintains a comprehensive SQLite database tracking:
 - Entry/exit prices and timestamps
@@ -62,7 +62,7 @@ The bot maintains a comprehensive SQLite database tracking:
 - Market conditions at trade time
 - Confidence scores and decision factors
 
-## 🤖 AI Integration
+##  AI Integration
 
 The optional AI validation layer provides an additional safety check by:
 - Analyzing market conditions
