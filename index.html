@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chima Ozonwoye - Portfolio</title>
+    <title>Chima Ozonwoye</title>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -21,16 +21,35 @@
         }
         
         h1 {
-            margin-bottom: 0.2em;
+            margin-bottom: 0.1em;
             color: #0a1628;
-            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+        }
+
+        .subheader {
+            font-size: 1.5em;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 1em;
+            font-weight: normal;
         }
 
         .intro {
-            color: #555;
+            color: #444;
             font-size: 1.1em;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
+            text-align: left; 
+            text-align: center; 
+        }
+
+        .intro p {
+            margin-bottom: 0.8em;
+        }
+
+        .intro a {
+            color: #0a1628;
+            text-decoration: underline;
         }
         
         .projects {
@@ -111,17 +130,20 @@
 </head>
 <body>
     <div class="header">
-        <h1>Chima Ozonwoye Portfolio</h1>
-        <p class="intro">
-            Systems Analyst with the ability to analyze and design solutions to complex technological systems.
-        </p>
+        <h1>Chima Ozonwoye</h1>
+        <h2 class="subheader">Systems Analyst</h2>
+        <div class="intro">
+            <p>Hello, I am Chima. I am an Albert Dorman Honors College scholar at the New Jersey Institute of Technology majoring in Information Systems.</p>
+            <p>I am a Systems Analyst on the path of acquiring the capabilities and expertise of an architect, currently with the ability to analyze and design solutions to complex technological systems.</p>
+            <p>You can reach me at <a href="mailto:ozonwoyechima@gmail.com">ozonwoyechima@gmail.com</a>.</p>
+        </div>
     </div>
     
     <div class="projects">
         <div class="project-card">
             <h2 class="project-title">The Amadi Framework</h2>
             <p class="project-description">
-                A constraint-first methodology extending traditional Systems Analysis and Design. This preprint paper details how I achieved top 36% placement in the 2025 DoD Cyber Sentinel Challenge without programming skills by treating resource limitations as design parameters.
+                A constraint-first methodology extending traditional Systems Analysis and Design. [cite_start]This preprint paper details how I achieved top 36% placement in the 2025 DoD Cyber Sentinel Challenge without programming skills by treating resource limitations as design parameters[cite: 686, 696].
             </p>
             <div class="project-links">
                 <a href="Ozonwoye_Amadi_Framework_Preprint.pdf" class="project-link" target="_blank">Read Paper</a>
@@ -131,7 +153,7 @@
         <div class="project-card">
             <h2 class="project-title">Curriculum Heroes Product Design</h2>
             <p class="project-description">
-                A comprehensive design specification for a curriculum-integrated career exposure platform. Features high-fidelity prototypes validated through GenderMag analysis to bridge the professional exposure gap for under-resourced elementary students in Newark, NJ.
+                A comprehensive design specification for a curriculum-integrated career exposure platform. [cite_start]Features high-fidelity prototypes validated through GenderMag analysis to bridge the professional exposure gap for under-resourced elementary students in Newark, NJ[cite: 176, 178].
             </p>
             <div class="project-links">
                 <a href="Ozonwoye_CurriculumHeroes_ProductDesignReport.pdf" class="project-link" target="_blank">View Design Spec</a>
@@ -139,10 +161,9 @@
         </div>
 
         <div class="project-card">
-            <h2 class="project-title">SECT - Security Intelligence Platform</h2>
+            <h2 class="project-title">SECT Security Platform (Prototype)</h2>
             <p class="project-description">
-                Enterprise-grade SIEM capabilities made accessible for everyone. Real-time threat detection, 
-                email security analysis, and AI-powered behavioral analysis - all running privately in your browser.
+                A functional proof-of-concept designed to democratize security for small organizations. Born from market analysis identifying service gaps, this browser-based prototype features real-time threat feeds and privacy-first client-side processing to simplify enterprise-grade risk assessment for non-technical business owners.
             </p>
             <div class="project-links">
                 <a href="SIEM/" class="project-link">Live Demo</a>
@@ -153,7 +174,7 @@
         <div class="project-card">
             <h2 class="project-title">MGM Resorts Cyber Breach Analysis</h2>
             <p class="project-description">
-                A critical case study of the 2023 MGM Resorts breach. This report examines the failure of technical controls against social engineering and provides a strategic risk assessment focused on strengthening the organizational "human firewall."
+                A critical case study of the 2023 MGM Resorts breach. [cite_start]This report examines the failure of technical controls against social engineering and provides a strategic risk assessment focused on strengthening the organizational "human firewall"[cite: 8, 14].
             </p>
             <div class="project-links">
                 <a href="Ozonwoye_MGM_RiskAnalysis.pdf" class="project-link" target="_blank">Read Case Study</a>
@@ -163,7 +184,7 @@
         <div class="project-card">
             <h2 class="project-title">Advanced Cryptocurrency Trading Bot</h2>
             <p class="project-description">
-                Sophisticated automated trading system featuring AI validation, machine learning pattern recognition, 
+                Automated trading system featuring AI validation, machine learning pattern recognition, 
                 sentiment analysis, and institutional-grade risk management for 24/7 cryptocurrency trading.
             </p>
             <div class="project-links">
@@ -174,7 +195,7 @@
     
     <div class="blog-section">
         <h2>Thoughts & Writings</h2>
-        <p>Occasional reflections on life as a whole, and technology</p>
+        <p>Occasional reflections on life and technology. These reflections represent my ongoing attempt to understand life, work, and technology - I welcome conversations with those who see things differently.</p>
         <a href="blog/" class="blog-link">Read my thoughts I'm comfortable sharing →</a>
     </div>
 </body>
