@@ -4,7 +4,7 @@ This repository contains projects and case studies focusing on systems analysis 
 
 ## Live Portfolio
 
-Visit the live portfolio at: [chimazuruihenine.github.io/portfolio](https://ChimaOzonwoye.github.io/portfolio/)
+Visit the live portfolio at: [ChimaOzonwoye.github.io/portfolio](https://ChimaOzonwoye.github.io/portfolio/)
 
 ## Projects
 
