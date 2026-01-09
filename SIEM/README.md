@@ -1,6 +1,6 @@
 # SECT - Security Intelligence Platform
 
-**[View Live Demo](https://chimazuruihenine.github.io/portfolio/SIEM/)**
+**[View Live Demo](https://ChimaOzonwoye.github.io/portfolio/SIEM/)**
 
 ## Project Context: Market Gap Analysis & Prototyping
 
