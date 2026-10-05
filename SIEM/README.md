@@ -11,7 +11,7 @@ This project represents a systems analysis case study rather than a traditional 
 
 ## Market Analysis & Problem Statement
 
-Through analysis of the current cybersecurity landscape, a critical service gap was identified: approximately 80% of small organizations and individuals remain vulnerable to common threat vectors.
+Through analysis of the cybersecurity landscape, a critical service gap was identified: small organizations face the same common threats as large ones, phishing above all, but rarely have the budget or the staff that enterprise security tools require.
 
 Existing Enterprise Security Information and Event Management (SIEM) tools present two significant barriers to entry for this demographic:
 1. **Cost:** Enterprise licensing is prohibitively expensive for small businesses.
