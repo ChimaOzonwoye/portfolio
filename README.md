@@ -19,7 +19,7 @@ A constraint-first methodology extending traditional Systems Analysis and Design
 A comprehensive design specification for a curriculum-integrated career exposure platform. Features high-fidelity prototypes validated through GenderMag analysis to bridge the professional exposure gap for under-resourced elementary students in Newark, NJ.
 
 ### SECT Security Platform (Prototype)
-[View Code](./SIEM/)
+[View full project log](./SIEM/)
 
 A functional proof-of-concept designed to democratize security for small organizations. Born from market analysis identifying service gaps, this browser-based prototype features real-time threat feeds and privacy-first client-side processing to simplify enterprise-grade risk assessment for non-technical business owners.
 
