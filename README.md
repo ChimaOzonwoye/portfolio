@@ -11,7 +11,7 @@ Visit the live portfolio at: [ChimaOzonwoye.github.io/portfolio](https://ChimaOz
 ### The Amadi Framework
 [Read Paper](Ozonwoye_Amadi_Framework_Preprint.pdf)
 
-A constraint-first methodology extending traditional Systems Analysis and Design. This preprint paper details how I achieved top 36% placement in the 2025 DoD Cyber Sentinel Challenge without programming skills by treating resource limitations as design parameters.
+Architected an AI orchestration system with file-based external memory and multi-instance parallel processing, designed to preserve progress through repeated system crashes across eight hours within 2.99GB of allocated RAM. Field-tested the design at the 2025 DoD Cyber Sentinel Challenge, where the architecture produced solutions across categories including forensics and web security, and sustained operation through repeated crashes.
 
 ### Curriculum Heroes Product Design
 [View Design Spec](Ozonwoye_CurriculumHeroes_ProductDesignReport.pdf)
