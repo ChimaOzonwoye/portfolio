@@ -61,4 +61,4 @@ This is a prototype provided "as is" to demonstrate a product vision. The creato
 
 ---
 
-**Contact:** ozonwoyechima at gmail dot com
+**Contact:** ozonwoyechima[at]gmail[dot]com
