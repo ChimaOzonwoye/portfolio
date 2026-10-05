@@ -35,4 +35,4 @@ Occasional reflections on life and technology. These reflections represent my on
 
 ---
 
-For professional inquiries: ozonwoyechima[at]gamil[dot]com
+For professional inquiries: ozonwoyechima[at]gmail[dot]com
