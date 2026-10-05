@@ -4,7 +4,7 @@ author: "Chima Ozonwoye"
 description: "To the esteemed reader, these reflections represent my ongoing attempt to understand life, work, and technology - I welcome conversations with those who see things differently."
 
 baseurl: "/portfolio"
-url: "https://chimazuruihenine.github.io"
+url: "https://chimaozonwoye.github.io"
 
 markdown: kramdown
 highlighter: rouge
@@ -20,4 +20,10 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true
+
+exclude:
+  - CRYPTO_BOT
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
