@@ -24,7 +24,7 @@ body {
 a { color: var(--text); text-decoration: none; transition: color .25s ease; }
 a:hover { color: var(--accent); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
 
 header { border-bottom: 1px solid var(--line); position: relative; }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 76px; }
@@ -113,12 +113,12 @@ h1 { animation: rise .8s cubic-bezier(.2,.7,.2,1) .1s both; }
 .reach { animation: rise .8s cubic-bezier(.2,.7,.2,1) .34s both; }
 @media (prefers-reduced-motion: reduce) { header, .label, .rule, h1, .lede, .reach { animation: none; } }
 @media (max-width: 960px) {
-  .wrap { padding: 0 28px; }
+  .wrap { padding-left: 28px; padding-right: 28px; }
   .nav a { padding: 12px 10px; }
   .hero { padding-top: 72px; padding-bottom: 64px; }
 }
 @media (max-width: 720px) {
-  .wrap { padding: 0 20px; }
+  .wrap { padding-left: 20px; padding-right: 20px; }
   .bar { min-height: 64px; }
   .name { font-size: 23px; }
   .bar .nav, .bar .icons { display: none; }
