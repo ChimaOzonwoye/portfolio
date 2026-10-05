@@ -82,14 +82,6 @@ layout: default
         color: white;
     }
     
-    .comments-indicator {
-        color: var(--text-tertiary);
-        font-size: 0.9em;
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-    }
-    
     .search-container {
         margin-bottom: 2em;
         text-align: center;
@@ -188,9 +180,6 @@ layout: default
             </div>
             <div class="post-card-actions">
                 <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-                <span class="comments-indicator">
-                    💬 Comments Available
-                </span>
             </div>
         </article>
         {% endfor %}
